@@ -281,6 +281,13 @@ h1 {
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drama-card:hover {
+  border-color: rgba(127, 245, 223, 0.34);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+  transform: translateY(-4px);
 }
 
 .drama-poster {
@@ -288,17 +295,186 @@ h1 {
   display: flex;
   align-items: flex-end;
   padding: 18px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: linear-gradient(135deg, rgba(127, 245, 223, 0.26), rgba(255, 159, 183, 0.2));
+}
+
+.drama-poster::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -45% -20%;
+  z-index: -1;
+  height: 76%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 64%);
+  opacity: 0.28;
 }
 
 .drama-poster span {
   display: inline-flex;
+  position: relative;
+  z-index: 2;
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(5, 21, 18, 0.74);
   color: #f6fff9;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.poster-art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.poster-art span {
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.52);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+.poster-art span:nth-child(1) {
+  right: 28px;
+  top: 22px;
+  font-size: 4.6rem;
+}
+
+.poster-art span:nth-child(2) {
+  right: 104px;
+  top: 64px;
+  font-size: 2.9rem;
+  opacity: 0.58;
+}
+
+.poster-art span:nth-child(3) {
+  right: 34px;
+  bottom: 26px;
+  font-size: 2.2rem;
+  opacity: 0.72;
+}
+
+.romance-art span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.62);
+  transform: rotate(-12deg);
+}
+
+.romance-art span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.38);
+  transform: rotate(16deg);
+}
+
+.jeju-art span:nth-child(1) {
+  color: rgba(255, 245, 180, 0.72);
+}
+
+.jeju-art span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 4.1rem;
+}
+
+.jeju-art span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.classic-art span:nth-child(1),
+.classic-art span:nth-child(3),
+.time-art span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.classic-art span:nth-child(2) {
+  color: rgba(255, 238, 179, 0.54);
+}
+
+.law-art span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 5rem;
+}
+
+.law-art span:nth-child(2) {
+  width: 72px;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+
+.law-art span:nth-child(3) {
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  color: transparent;
+}
+
+.action-art span:nth-child(1) {
+  color: rgba(255, 241, 161, 0.82);
+  transform: rotate(10deg);
+}
+
+.action-art span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.action-art span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: inherit;
+  font-size: 4rem;
+}
+
+.time-art span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.62);
+  transform: rotate(-14deg);
+}
+
+.time-art span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 4rem;
+}
+
+.office-art span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.58);
+  transform: rotate(-10deg);
+}
+
+.office-art span:nth-child(2) {
+  width: 60px;
+  height: 42px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.48);
+  border-radius: 10px;
+  color: transparent;
+}
+
+.office-art span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.suspense-art span:nth-child(1) {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 5.4rem;
+}
+
+.suspense-art span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.38);
+  font-family: inherit;
+  font-size: 4rem;
+}
+
+.suspense-art span:nth-child(3) {
+  color: rgba(255, 255, 255, 0.32);
 }
 
 .romance-poster {
