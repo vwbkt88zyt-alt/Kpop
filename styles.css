@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 .hero {
   min-height: 100vh;
   padding: 24px 24px 60px;
@@ -57,7 +61,9 @@ a {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -107,15 +113,26 @@ h1 {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 18px;
   border-radius: 999px;
   font-weight: 700;
   border: 1px solid transparent;
+  color: var(--text);
+  cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
 }
 
 .btn.primary {
@@ -160,16 +177,202 @@ h1 {
 }
 
 .quiz-hero {
-  min-height: 60vh;
+  min-height: 46vh;
   padding-bottom: 40px;
   background: radial-gradient(circle at top left, rgba(255, 95, 210, 0.25), transparent 28%),
     radial-gradient(circle at top right, rgba(83, 183, 255, 0.25), transparent 28%);
 }
 
+.kdrama-theme {
+  --pink: #7ff5df;
+  --blue: #ff9fb7;
+  --bg: #051512;
+  --bg-soft: #251333;
+  --muted: #c5d5d0;
+  background: linear-gradient(135deg, #041512 0%, #10263d 44%, #321734 100%);
+}
+
+.kdrama-theme .eyebrow {
+  color: #7ff5df;
+}
+
+.kdrama-hero {
+  min-height: 78vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(135deg, #041512 0%, #10263d 44%, #321734 100%);
+}
+
+.kdrama-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(4, 21, 18, 0.9), rgba(16, 38, 61, 0.72) 48%, rgba(50, 23, 52, 0.56)),
+    linear-gradient(180deg, transparent 62%, #051512);
+}
+
+.kdrama-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.kdrama-hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.kdrama-hero-content p {
+  color: #d7e6e1;
+  font-size: 1.08rem;
+  max-width: 620px;
+}
+
+.mood-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 44px;
+  padding-bottom: 24px;
+}
+
+.mood-pill {
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(127, 245, 223, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mood-pill span {
+  display: block;
+  color: #7ff5df;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.mood-pill strong {
+  color: #f6fff9;
+}
+
+.drama-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.drama-card {
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+}
+
+.drama-poster {
+  min-height: 190px;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  background: linear-gradient(135deg, rgba(127, 245, 223, 0.26), rgba(255, 159, 183, 0.2));
+}
+
+.drama-poster span {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(5, 21, 18, 0.74);
+  color: #f6fff9;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.romance-poster {
+  background: linear-gradient(140deg, #6d234b, #fb8fa6 55%, #f5d1d7);
+}
+
+.jeju-poster {
+  background: linear-gradient(140deg, #0e6655, #76d0bb 54%, #f1cf7a);
+}
+
+.classic-poster {
+  background: linear-gradient(140deg, #172a52, #5f8dd5 50%, #e6d9ff);
+}
+
+.law-poster {
+  background: linear-gradient(140deg, #243b4f, #82c8d8 52%, #f5f7ff);
+}
+
+.action-poster {
+  background: linear-gradient(140deg, #161821, #4954a4 50%, #ff7868);
+}
+
+.time-poster {
+  background: linear-gradient(140deg, #4a225a, #c77be6 52%, #ffe07a);
+}
+
+.office-poster {
+  background: linear-gradient(140deg, #0f625f, #73e0c7 52%, #ffd1aa);
+}
+
+.revenge-poster {
+  background: linear-gradient(140deg, #101018, #5e243f 52%, #d85b7f);
+}
+
+.drama-card-body {
+  padding: 20px;
+}
+
+.drama-card .card-badge {
+  margin-bottom: 16px;
+  background: rgba(127, 245, 223, 0.14);
+  color: #b6fff1;
+}
+
+.drama-card h3 {
+  color: #fff;
+}
+
+.drama-card p {
+  color: var(--muted);
+}
+
+.watch-for {
+  margin-top: 14px;
+  color: #f6fff9;
+  font-weight: 700;
+}
+
+.kdrama-watch-box {
+  background: linear-gradient(135deg, rgba(127, 245, 223, 0.13), rgba(255, 159, 183, 0.12));
+}
+
+.kdrama-watch-box .btn {
+  margin-top: 14px;
+}
+
+.kdrama-teaser .quiz-intro {
+  background: linear-gradient(135deg, rgba(127, 245, 223, 0.16), rgba(255, 159, 183, 0.14));
+}
+
 .quiz-only {
   max-width: 760px;
   margin: 0 auto 80px;
-  padding: 40px 24px;
+  padding: 32px 24px 40px;
 }
 
 .options-grid {
@@ -178,12 +381,29 @@ h1 {
   margin: 24px 0;
 }
 
+.quiz-progress {
+  color: #ffb6f2;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
 .option-button {
   width: 100%;
+  border: 1px solid var(--border);
+  color: var(--text);
   text-align: left;
   padding: 18px 20px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.07);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.option-button:hover {
+  background: rgba(83, 183, 255, 0.14);
+  transform: translateY(-1px);
 }
 
 .option-button.selected {
@@ -225,6 +445,21 @@ h1 {
   color: #dcd6f7;
 }
 
+.perfect-score {
+  color: #dcd6f7;
+  font-weight: 700;
+}
+
+.summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 64px 24px;
 }
 
@@ -256,6 +491,10 @@ h1 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
+.quiz-intro .btn {
+  margin-top: 18px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -267,14 +506,27 @@ h1 {
   min-height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
+.card-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center 28%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .card h3 {
   color: white;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .card p {
@@ -282,9 +534,10 @@ h1 {
   line-height: 1.6;
 }
 
-.card.badge {
+.card .card-badge {
+  align-self: flex-start;
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 2px;
   padding: 10px 16px;
   background: rgba(255, 95, 210, 0.18);
   border-radius: 999px;
@@ -426,6 +679,8 @@ h1 {
   .hero-content,
   .split,
   .cards,
+  .drama-grid,
+  .mood-strip,
   .quiz-grid,
   .mistake-grid {
     grid-template-columns: 1fr;
@@ -434,5 +689,36 @@ h1 {
   .nav {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    row-gap: 8px;
+  }
+
+  .quiz-hero {
+    min-height: auto;
+  }
+
+  .kdrama-hero {
+    min-height: auto;
+  }
+
+  .kdrama-hero-content {
+    padding-top: 40px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-photo {
+    border-radius: 14px;
+  }
+
+  .quiz-actions,
+  .summary-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 }

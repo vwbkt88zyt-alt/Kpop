@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Quiz dinâmico de Stray Kids para baby stays." />
     <title>Quiz Stray Kids</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -15,6 +16,7 @@
           <a href="index.html#membros">Membros</a>
           <a href="index.html#musicas">Músicas</a>
           <a href="index.html#kpopers">K-popers</a>
+          <a href="kdramas.html">K-drama</a>
           <a href="index.html">Voltar</a>
         </div>
       </nav>
@@ -31,11 +33,11 @@
     <main>
       <section class="section quiz-only">
         <div class="quiz-card active" id="question-card">
+          <p class="quiz-progress" id="quizProgress"></p>
           <h2 id="question-title">Pergunta</h2>
           <div id="question-options" class="options-grid"></div>
           <div class="quiz-actions">
-            <button class="btn secondary" id="prevQuestion">Anterior</button>
-            <button class="btn primary" id="nextQuestion">Próxima</button>
+            <button class="btn secondary" id="prevQuestion">Voltar</button>
           </div>
         </div>
 
@@ -43,7 +45,10 @@
           <h2>Resultado do quiz</h2>
           <p id="summaryText"></p>
           <div id="wrongAnswers" class="wrong-answers"></div>
-          <a class="btn primary" href="index.html">Voltar ao site</a>
+          <div class="summary-actions">
+            <button class="btn secondary" id="restartQuiz">Jogar novamente</button>
+            <a class="btn primary" href="index.html">Voltar ao site</a>
+          </div>
         </div>
       </section>
     </main>

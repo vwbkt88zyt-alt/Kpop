@@ -1,10 +1,59 @@
 {
   "version": 2,
-  "outputDirectory": ".",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "quiz.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "kdramas.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "script.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "quiz.js",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/quiz.html",
+      "dest": "/quiz.html"
+    },
+    {
+      "src": "/kdramas.html",
+      "dest": "/kdramas.html"
+    },
+    {
+      "src": "/styles.css",
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/script.js"
+    },
+    {
+      "src": "/quiz.js",
+      "dest": "/quiz.js"
     }
   ]
 }
