@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Uma fanpage especial de Stray Kids criada para alegrar o dia de uma filha." />
+    <title>Stray Kids para você</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#top">SK ♡</a>
+        <div class="nav-links">
+          <a href="#membros">Membros</a>
+          <a href="#musicas">Músicas</a>
+          <a href="#mensagem">Mensagem</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+      </nav>
+
+      <div class="hero-content" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Fanpage especial para baby stays</p>
+          <h1>Stray Kids, brilho, energia e muita alegria.</h1>
+          <p>
+            Este é um cantinho cheio de cores e carinho para celebrar o grupo
+            que faz tantos corações baterem mais forte, especialmente para as baby stays.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#membros">Conheça os membros</a>
+            <a class="btn secondary" href="#quiz">Ir para o quiz</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="card-badge">5-STAR</div>
+          <h2>Stray Kids</h2>
+          <p>Uma vibe intensa, cheia de talento e muita personalidade.</p>
+          <ul>
+            <li>✨ Música com emoção</li>
+            <li>🎤 Performance marcante</li>
+            <li>💖 Feito para inspirar fãs</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal" id="membros">
+        <div class="section-head">
+          <p class="eyebrow">Os meninos</p>
+          <h2>Conheça o elenco que faz tudo brilhar</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Bang Chan</h3>
+            <p>O líder com presença forte e voz incrível.</p>
+          </article>
+          <article class="card">
+            <h3>Lee Know</h3>
+            <p>Estilo marcante e performance cheia de impacto.</p>
+          </article>
+          <article class="card">
+            <h3>Changbin</h3>
+            <p>Energia, talento e uma presença irresistível.</p>
+          </article>
+          <article class="card">
+            <h3>Hyunjin</h3>
+            <p>Elegância, charme e muita expressão no palco.</p>
+          </article>
+          <article class="card">
+            <h3>Han</h3>
+            <p>Creatividade e voz que conquistam de imediato.</p>
+          </article>
+          <article class="card">
+            <h3>Felix</h3>
+            <p>Uma alegria contagiante que ilumina tudo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split reveal" id="musicas">
+        <div>
+          <p class="eyebrow">Playlist</p>
+          <h2>Algumas músicas que fazem o coração acelerar</h2>
+          <p>
+            Se a sua filha gosta de Stray Kids, estas faixas são ótimas para
+            entrar no universo do grupo com muita emoção.
+          </p>
+        </div>
+
+        <div class="playlist">
+          <div class="song">God's Menu</div>
+          <div class="song">S-Class</div>
+          <div class="song">LALALALA</div>
+          <div class="song">Chk Chk Boom</div>
+          <div class="song">Maniac</div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="mensagem">
+        <div class="message-box">
+          <p class="eyebrow">Mensagem especial</p>
+          <h2>Para a sua filha, com carinho</h2>
+          <p>
+            Que esse espaço traga sorrisos, vontade de cantar e um pouco da
+            magia que o Stray Kids transmite. Desejo que cada momento aqui
+            seja cheio de alegria e inspiração para as baby stays.
+          </p>
+          <p class="signature">Com muito carinho, um site feito para você.</p>
+        </div>
+      </section>
+
+      <section class="section reveal quiz-page" id="quiz">
+        <div class="quiz-intro">
+          <p class="eyebrow">Quiz divertido</p>
+          <h2>Vamos jogar com o universo Stray Kids!</h2>
+          <p>Esta é uma aba especial para as baby stays se divertirem e testarem o conhecimento com carinho.</p>
+          <button class="btn primary" id="startQuiz">Começar quiz</button>
+        </div>
+
+        <div class="quiz-grid hidden" id="quizGrid">
+          <article class="quiz-card" data-question="q1">
+            <h3>1. Qual é o nome do grupo?</h3>
+            <div class="options">
+              <button class="option" data-correct="true">Stray Kids</button>
+              <button class="option">BTS</button>
+              <button class="option">Seventeen</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q2">
+            <h3>2. Quem é o líder do grupo?</h3>
+            <div class="options">
+              <button class="option" data-correct="true">Bang Chan</button>
+              <button class="option">Hyunjin</button>
+              <button class="option">Felix</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q3">
+            <h3>3. Qual dessas músicas faz parte do universo do grupo?</h3>
+            <div class="options">
+              <button class="option">Love Dive</button>
+              <button class="option" data-correct="true">God's Menu</button>
+              <button class="option">How You Like That</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q4">
+            <h3>4. Qual membro é conhecido por ter uma presença muito marcante no palco?</h3>
+            <div class="options">
+              <button class="option">Lee Know</button>
+              <button class="option" data-correct="true">Hyunjin</button>
+              <button class="option">Changbin</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q5">
+            <h3>5. Qual é o nome do fandom?</h3>
+            <div class="options">
+              <button class="option" data-correct="true">STAY</button>
+              <button class="option">ARMY</button>
+              <button class="option">BLINK</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q6">
+            <h3>6. Qual desses membros é o rapper principal?</h3>
+            <div class="options">
+              <button class="option">Felix</button>
+              <button class="option" data-correct="true">Changbin</button>
+              <button class="option">Han</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q7">
+            <h3>7. Qual música é conhecida por ter uma vibe muito forte e energética?</h3>
+            <div class="options">
+              <button class="option" data-correct="true">S-Class</button>
+              <button class="option">Dynamite</button>
+              <button class="option">Butter</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q8">
+            <h3>8. Qual membro é conhecido por sua voz poderosa e presença forte?</h3>
+            <div class="options">
+              <button class="option">Lee Know</button>
+              <button class="option" data-correct="true">Bang Chan</button>
+              <button class="option">Felix</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q9">
+            <h3>9. O grupo é famoso por qual estilo de música?</h3>
+            <div class="options">
+              <button class="option">Pop clássico</button>
+              <button class="option" data-correct="true">Hip-hop e pop experimental</button>
+              <button class="option">Rock acústico</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q10">
+            <h3>10. Qual membro é conhecido por ter uma energia acolhedora e muito carismática?</h3>
+            <div class="options">
+              <button class="option">Hyunjin</button>
+              <button class="option" data-correct="true">Felix</button>
+              <button class="option">Han</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q11">
+            <h3>11. Qual destes membros é conhecido por sua versatilidade e talento artístico?</h3>
+            <div class="options">
+              <button class="option">Lee Know</button>
+              <button class="option">Felix</button>
+              <button class="option" data-correct="true">Han</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q12">
+            <h3>12. Qual música tem um conceito muito forte e visual marcante?</h3>
+            <div class="options">
+              <button class="option">Dynamite</button>
+              <button class="option" data-correct="true">Maniac</button>
+              <button class="option">As If It's Your Last</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q13">
+            <h3>13. Qual membro é conhecido por seu estilo único e presença forte?</h3>
+            <div class="options">
+              <button class="option">Bang Chan</button>
+              <button class="option" data-correct="true">Lee Know</button>
+              <button class="option">Felix</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q14">
+            <h3>14. Qual é a sigla do grupo?</h3>
+            <div class="options">
+              <button class="option">SKZ</button>
+              <button class="option" data-correct="true">Stray Kids</button>
+              <button class="option">STK</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q15">
+            <h3>15. Qual desses nomes faz parte do grupo?</h3>
+            <div class="options">
+              <button class="option">Jimin</button>
+              <button class="option" data-correct="true">Seungmin</button>
+              <button class="option">Minghao</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q16">
+            <h3>16. Qual é uma característica muito forte do grupo?</h3>
+            <div class="options">
+              <button class="option">Muita calma</button>
+              <button class="option" data-correct="true">Energia, talento e performances incríveis</button>
+              <button class="option">Pouca presença no palco</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q17">
+            <h3>17. Qual membro é conhecido por seu talento com rap e produção?</h3>
+            <div class="options">
+              <button class="option">Felix</button>
+              <button class="option" data-correct="true">Changbin</button>
+              <button class="option">Bang Chan</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q18">
+            <h3>18. Qual música é uma das mais conhecidas do grupo?</h3>
+            <div class="options">
+              <button class="option">Black Swan</button>
+              <button class="option" data-correct="true">LALALALA</button>
+              <button class="option">DNA</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q19">
+            <h3>19. Qual membro é muito amado por sua presença alegre e carinhosa?</h3>
+            <div class="options">
+              <button class="option" data-correct="true">Felix</button>
+              <button class="option">Lee Know</button>
+              <button class="option">Hyunjin</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q20">
+            <h3>20. Qual é um papel importante do líder Bang Chan?</h3>
+            <div class="options">
+              <button class="option">Cantar só</button>
+              <button class="option" data-correct="true">Guiar o grupo e coordenar a performance</button>
+              <button class="option">Fazer tudo sozinho</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q21">
+            <h3>21. Qual música mostra muito a força da identidade do grupo?</h3>
+            <div class="options">
+              <button class="option">Love Story</button>
+              <button class="option" data-correct="true">God's Menu</button>
+              <button class="option">Stay</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q22">
+            <h3>22. Qual membro é conhecido por sua energia e personalidade vibrante?</h3>
+            <div class="options">
+              <button class="option">Bang Chan</button>
+              <button class="option" data-correct="true">Han</button>
+              <button class="option">Seungmin</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q23">
+            <h3>23. Qual desses nomes é um membro do grupo?</h3>
+            <div class="options">
+              <button class="option">Jisung</button>
+              <button class="option" data-correct="true">Hyunjin</button>
+              <button class="option">Taehyung</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q24">
+            <h3>24. Qual música transmite uma sensação muito intensa e surpreendente?</h3>
+            <div class="options">
+              <button class="option">Perfect Night</button>
+              <button class="option" data-correct="true">Maniac</button>
+              <button class="option">Hype Boy</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q25">
+            <h3>25. O que as STAYs representam para o grupo?</h3>
+            <div class="options">
+              <button class="option">Apenas fãs de outra banda</button>
+              <button class="option" data-correct="true">Uma família que apoia e ama o grupo</button>
+              <button class="option">Um grupo de crítica</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q26">
+            <h3>26. Qual membro é conhecido por sua presença elegante e visual marcante?</h3>
+            <div class="options">
+              <button class="option">Felix</button>
+              <button class="option" data-correct="true">Hyunjin</button>
+              <button class="option">Changbin</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q27">
+            <h3>27. Qual música é um símbolo de força e identidade para o grupo?</h3>
+            <div class="options">
+              <button class="option">Bubble Gum</button>
+              <button class="option" data-correct="true">S-Class</button>
+              <button class="option">Loco</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q28">
+            <h3>28. Qual membro é conhecido por seu talento musical e criatividade?</h3>
+            <div class="options">
+              <button class="option">Felix</button>
+              <button class="option" data-correct="true">Han</button>
+              <button class="option">Bang Chan</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q29">
+            <h3>29. Qual é uma palavra que combina com Stray Kids?</h3>
+            <div class="options">
+              <button class="option">Calma</button>
+              <button class="option" data-correct="true">Energia</button>
+              <button class="option">Tranquilidade</button>
+            </div>
+          </article>
+
+          <article class="quiz-card" data-question="q30">
+            <h3>30. Qual é a mensagem principal para as STAYs?</h3>
+            <div class="options">
+              <button class="option">Só cantar</button>
+              <button class="option" data-correct="true">Amar, apoiar e crescer junto</button>
+              <button class="option">Ficar em silêncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="quiz-actions">
+          <button class="btn primary" id="quizButton">Ver resultado</button>
+          <div class="quiz-result" id="quizResult">Escolha as respostas para ver sua pontuação.</div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="mistakes">
+        <div class="section-head">
+          <p class="eyebrow">Perguntas que você errou</p>
+          <h2>Alguns erros fofos que viraram histórias</h2>
+        </div>
+
+        <div class="mistake-grid">
+          <article class="mistake-card">
+            <h3>Quem é o líder?</h3>
+            <p>Algumas baby stays confundiram, mas a resposta certa é Bang Chan.</p>
+          </article>
+          <article class="mistake-card">
+            <h3>Qual é o fandom?</h3>
+            <p>O nome certo é STAY, e isso é um clássico de confusão.</p>
+          </article>
+          <article class="mistake-card">
+            <h3>Qual música é do grupo?</h3>
+            <p>God's Menu é uma das respostas certas, e muitas vezes aparece junto de outras faixas.</p>
+          </article>
+          <article class="mistake-card">
+            <h3>Quem é conhecido por tanta energia?</h3>
+            <p>Felix é um nome muito lembrado, e também muito amado pelas STAYs.</p>
+          </article>
+          <article class="mistake-card">
+            <h3>Qual é o nome do grupo?</h3>
+            <p>Mesmo com tanta paixão, algumas vezes o nome pode parecer confuso no começo.</p>
+          </article>
+          <article class="mistake-card">
+            <h3>Quem é o rapper principal?</h3>
+            <p>Changbin é uma resposta certeira para quem conhece bem o grupo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="support">
+        <div class="message-box support-box">
+          <p class="eyebrow">Para as baby stays</p>
+          <h2>Os meninos e o carinho das STAYs</h2>
+          <p>
+            Stray Kids são mais do que um grupo: são um conjunto de talentos, emoções e mensagens que inspiram milhões de pessoas. Cada membro traz algo especial — desde a liderança forte de Bang Chan até a alegria contagiante de Felix, passando pela energia de Hyunjin, a criatividade de Han, a presença marcante de Lee Know e a força de Changbin. Juntos, eles mostram que talento, trabalho e coração podem transformar a música em algo muito maior.
+          </p>
+          <p>
+            E as baby stays, com seu amor, apoio e carinho, fazem parte dessa história. O vínculo entre os meninos e as STAYs é especial porque cresce com cada música, cada performance e cada palavra de incentivo. Quando o fandom apoia, o brilho do grupo fica ainda mais forte.
+          </p>
+          <p class="signature">Que a paixão por Stray Kids continue brilhando sempre.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Feito com carinho para celebrar o universo Stray Kids.</p>
+      <p>© <span id="year"></span> Fanpage especial</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
