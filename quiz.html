@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quiz dinâmico de Stray Kids para baby stays." />
+    <title>Quiz Stray Kids</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero quiz-hero">
+      <nav class="nav">
+        <a class="brand" href="index.html">SK ♡</a>
+        <div class="nav-links">
+          <a href="index.html#membros">Membros</a>
+          <a href="index.html#musicas">Músicas</a>
+          <a href="index.html#kpopers">K-popers</a>
+          <a href="index.html">Voltar</a>
+        </div>
+      </nav>
+
+      <div class="hero-content" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Quiz interativo</p>
+          <h1>Teste seus conhecimentos sobre Stray Kids</h1>
+          <p>Responda uma pergunta por vez e veja seu resultado final com os erros destacados.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section quiz-only">
+        <div class="quiz-card active" id="question-card">
+          <h2 id="question-title">Pergunta</h2>
+          <div id="question-options" class="options-grid"></div>
+          <div class="quiz-actions">
+            <button class="btn secondary" id="prevQuestion">Anterior</button>
+            <button class="btn primary" id="nextQuestion">Próxima</button>
+          </div>
+        </div>
+
+        <div class="quiz-summary hidden" id="quizSummary">
+          <h2>Resultado do quiz</h2>
+          <p id="summaryText"></p>
+          <div id="wrongAnswers" class="wrong-answers"></div>
+          <a class="btn primary" href="index.html">Voltar ao site</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
