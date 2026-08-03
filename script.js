@@ -21,12 +21,14 @@ const quizResult = document.getElementById('quizResult');
 const optionButtons = document.querySelectorAll('.option');
 const startQuizButton = document.getElementById('startQuiz');
 const quizGrid = document.getElementById('quizGrid');
+const quizActions = document.getElementById('quizActions');
 const quizIntro = document.querySelector('.quiz-intro');
 const selectedAnswers = {};
 
 startQuizButton?.addEventListener('click', () => {
   quizIntro.classList.add('hidden');
   quizGrid.classList.remove('hidden');
+  quizActions.classList.remove('hidden');
 });
 
 optionButtons.forEach((button) => {

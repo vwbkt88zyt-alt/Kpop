@@ -193,10 +193,6 @@ h1 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.hidden {
-  display: none;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -317,6 +313,10 @@ h1 {
 
 .quiz-result {
   color: var(--muted);
+}
+
+.hidden {
+  display: none;
 }
 
 .footer {
