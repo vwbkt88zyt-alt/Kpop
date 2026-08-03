@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quiz musical de K-pop com pistas sonoras para adivinhar a música." />
+    <title>Quiz de música K-pop</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="music-quiz-theme">
+    <header class="hero music-hero">
+      <nav class="nav">
+        <a class="brand" href="index.html">SK ♡</a>
+        <div class="nav-links">
+          <a href="index.html">Início</a>
+          <a href="index.html#musicas">Músicas</a>
+          <a href="quiz.html">Quiz K-pop</a>
+          <a href="kdramas.html">K-drama</a>
+        </div>
+      </nav>
+
+      <div class="music-hero-content" id="top">
+        <p class="eyebrow">Desafio musical da Sophia</p>
+        <h1>Qual é a música?</h1>
+        <p>
+          Aperte play, ouça a pista musical e escolha qual hit combina com a vibe.
+          Cada rodada vem embaralhada para deixar a brincadeira mais divertida.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section music-quiz-section">
+        <div class="music-quiz-card" id="musicQuestionCard">
+          <div class="music-question-head">
+            <p class="quiz-progress" id="musicProgress"></p>
+            <h2 id="musicQuestionTitle">Qual é a música?</h2>
+          </div>
+
+          <button class="music-play-button" id="playMusicCue" type="button" aria-label="Tocar pista sonora">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span id="playButtonText">Tocar pista</span>
+          </button>
+
+          <div class="equalizer" aria-hidden="true" id="equalizer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div id="musicOptions" class="options-grid music-options"></div>
+
+          <div class="quiz-actions">
+            <button class="btn secondary" id="prevMusicQuestion" type="button">Voltar</button>
+          </div>
+        </div>
+
+        <div class="quiz-summary music-summary hidden" id="musicQuizSummary">
+          <h2>Resultado do quiz musical</h2>
+          <p id="musicSummaryText"></p>
+          <div id="musicWrongAnswers" class="wrong-answers"></div>
+          <div class="summary-actions">
+            <button class="btn secondary" id="restartMusicQuiz" type="button">Jogar novamente</button>
+            <a class="btn primary" href="index.html">Voltar ao site</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="music-quiz.js"></script>
+  </body>
+</html>

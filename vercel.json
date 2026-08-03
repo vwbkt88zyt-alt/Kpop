@@ -14,6 +14,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "music-quiz.html",
+      "use": "@vercel/static"
+    },
+    {
       "src": "styles.css",
       "use": "@vercel/static"
     },
@@ -23,6 +27,10 @@
     },
     {
       "src": "quiz.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "music-quiz.js",
       "use": "@vercel/static"
     }
   ],
@@ -44,6 +52,10 @@
       "dest": "/kdramas.html"
     },
     {
+      "src": "/music-quiz.html",
+      "dest": "/music-quiz.html"
+    },
+    {
       "src": "/styles.css",
       "dest": "/styles.css"
     },
@@ -54,6 +66,10 @@
     {
       "src": "/quiz.js",
       "dest": "/quiz.js"
+    },
+    {
+      "src": "/music-quiz.js",
+      "dest": "/music-quiz.js"
     }
   ]
 }
